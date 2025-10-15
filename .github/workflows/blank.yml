@@ -24,7 +24,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-
+      
+      - name: Set up Git
+        run: |
+          git config user.name "Danilo"
+          git config user.email "danilo.ourique@hotmail.com"
       # Runs a single command using the runners shell
       - name: Read and increment version
         run: |
